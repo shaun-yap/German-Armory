@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>German Armory</name>
+	<author>WinnieTheJinPing</author>
+	<supportedVersions>
+	<li>1.1</li>
+	</supportedVersions>
+	<packageId>WinnieTheJinPing.GermanArmory</packageId>
+	<description>Combines the Kaiser Armory(KA)Reich Armory(RA) by ALIEN with heavy modifications. ALIEN is aware of this mod but it isn't an official branch.
+
+There is no dependancy for his two mods, but keep in mind that if you do run either one of them with this mod, it will cause issues.
+
+Discord for support/suggestions: https://discord.gg/Jdj2F2t
+
+Changes as follows:
+
+Category
+- Weapons are in their own sub category in Weapons, rather than it's own. I don't know if I want them in Ranged and Melee, rather than their own one right now.
+
+Research
+- Research is split into tech (Bolt action, etc), rather than chronologically.
+- All ammo for artillery now unlocks with the gun, instead of flooding your crafting table with ammo you can't use.
+
+Work bench
+- Halved power requirement for the table
+- Table will now not allow overlap of the crafting spot
+- Table will operate at 30% efficiency when it is unpowered.
+
+FK 96
+- Shells can arc over obstacles but cannot fire without LOS. I'm looking at allowing it to fire close to itself without LOS but I think this might require extra coding..
+- AP shell now deals 160 base damage, flies faster, has a reduced chemfuel cost, and increased steel cost.
+
+Nebelwerfer
+- Adds a poison gas round, deal (very overpowered for now) damage to your enemies.
+- Poison gas and smoke shells now require less chemfuel to make.
+- The poison gas recipe now requires something poisonous, luciferium. 
+
+Trading
+- All rounds should now appear in trader inventories. So buy ammo not make em?
+
+Sniper Variants
+- Sniper variants of any rifle now deals double damage (36) and has an increased range
+- Upgrading to the Sniper/Bayonet classes now just require resources and work(based on what you're adding, it's all base values with slight tweaks) rather than requiring a separate crafting queue.
+- Gave the Gew 98 a sniper variant too.
+
+Kar 98K B.Patronen
+- Adds a Kar 98K B.Patronen, insipired by the sniper from Company of Heroes 2. It lights people up so uh, watch out for fire...
+
+Feldspaten
+- Feldspaten is combined from the two mods. Not really a point to have multiple. Having colonists with these equipped gives you a substantial mining speed boost (150%) and a moderate yield boost (50%).
+
+Ammo boxes, bayonets, scopes
+- Removed. Upgrading now consumes the resources and the work required to make the upgrade item (ie scopes) rather than requiring a second production line
+
+Discord for support/suggestions: https://discord.gg/Jdj2F2t
+</description>
+	<loadAfter>
+		<li>UnlimitedHugs.HugsLib</li>
+	</loadAfter>
+</ModMetaData>
+
+<!-- Steam Description
+	
+[b]Reupload cause Steam didn't like the swastika[/b]
+
+Combines the [url=https://steamcommunity.com/workshop/filedetails/?id=1768843436]Kaiser Armory(KA)[/url] and the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1778648673]Reich Armory(RA)[/url] by ALIEN with some modifications. ALIEN is aware of this mod but it isn't an official branch.
+
+There is no dependancy for his two mods, but keep in mind that if you do run either one of them, it will not work with this one.
+
+[b]Discord for support/suggestions: https://discord.gg/Jdj2F2t[/b]
+
+Changes as follows:
+[b]Research[/b]
+- Research is split into tech (Bolt action, etc), rather than chronologically.
+- All ammo for artillery now unlocks with the gun, instead of flooding your crafting table with ammo you can't use.
+
+[b]Work bench[/b]
+- Halved power requirement for the table
+- Table will now not allow overlap of the crafting spot
+- Table will operate at 30% efficiency when it is un-powered.
+
+[b]FK 96[/b]
+- Shells can arc over obstacles but cannot fire without LOS. I'm looking at allowing it to fire close to itself without LOS but I think this might require extra coding...
+- AP shell now deals 160 base damage, flies faster, has a reduced chemfuel cost, and increased steel cost.
+
+[b]Nebelwerfer[/b]
+- Adds a poison gas round, deal (very overpowered for now) damage to your enemies.
+- Poison gas and smoke shells now require less chemfuel to make.
+- The poison gas recipe now requires something poisonous, Luciferium. 
+
+[b]Trading[/b]
+- All rounds should now appear in trader inventories. So buy ammo not make em?
+
+[b]Sniper Variants[/b]
+- Sniper variants of any rifle now deals double damage (36) and has an increased range
+- Upgrading to the Sniper/Bayonet classes now just require resources and work(based on what you're adding, it's all base values with slight tweaks) rather than requiring a separate crafting queue.
+- Gave the Gew 98 a sniper variant too.
+
+[b]Kar 98K B.Patronen[/b]
+- Adds a Kar 98K B.Patronen, inspired by the sniper from Company of Heroes 2. It lights people up so uh, watch out for fire...
+
+[b]Feldspaten[/b]
+- Feldspaten is combined from the two mods. Not really a point to have multiple. Having colonists with these equipped gives you a substantial mining speed boost (150%) and a moderate yield boost (50%).
+
+[b]Ammo boxes, bayonets, scopes[/b]
+- Removed. Upgrading now consumes the resources and the work required to make the upgrade item (ie scopes) rather than requiring a second production line
+
+[b]Discord for support/suggestions: https://discord.gg/Jdj2F2t[/b]
+[b]If you enjoyed this mod, give it a thumbs up. It motivates me to work on it more[/b]
+
+-->
