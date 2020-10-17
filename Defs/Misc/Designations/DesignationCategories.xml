@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- <DesignationCategoryDef>
+		<defName>German_Armory_Tab</defName>
+    <label>German Armory</label>
+    <order>300</order>
+    <specialDesignatorClasses>
+		<li>Designator_Cancel</li>
+		<li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+	</DesignationCategoryDef> -->
+
+</Defs>

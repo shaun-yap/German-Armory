@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Defs>
+    <!-- GA Base Guns -->
+    <ThingDef Name="BaseGun_GA" Abstract="True" ParentName="BaseWeapon">
+        <techLevel>Industrial</techLevel>
+        <smeltable>true</smeltable>
+        <thingCategories>
+            <li>GermanArmoryCat</li>
+        </thingCategories>
+        <inspectorTabs>
+            <li>ITab_Art</li>
+        </inspectorTabs>
+        <statBases>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="BaseGunWithQuality_GA" Abstract="True" ParentName="BaseGun_GA">
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="BaseMakeableGun_GA" ParentName="BaseGunWithQuality_GA" Abstract="True">
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>TableGA</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef Name="BaseMakeableGrenade_GA" ParentName="BaseWeapon" Abstract="True">
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>TableGA</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+        </recipeMaker>
+    </ThingDef>
+
+</Defs>

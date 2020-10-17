@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef Name="BaseMeleeWeapon_GA" Abstract="True" ParentName="BaseWeapon">
+        <techLevel>Industrial</techLevel>
+        <smeltable>true</smeltable>
+        <thingCategories>
+            <li>MeleeWeapon_GA</li>
+        </thingCategories>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>TableGA</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+        </recipeMaker>
+        <inspectorTabs>
+            <li>ITab_Art</li>
+        </inspectorTabs>
+    </ThingDef>
+
+    <ThingDef Name="BaseMeleeWeapon_Sharp_GA" ParentName="BaseMeleeWeapon_GA" Abstract="True">
+        <recipeMaker>
+            <defaultIngredientFilter>
+                <categories>
+                    <li>Root</li>
+                </categories>
+                <disallowedThingDefs>
+                    <li>Silver</li>
+                    <li>Gold</li>
+                    <li>Plasteel</li>
+                    <li>Uranium</li>
+                    <li>Jade</li>
+                </disallowedThingDefs>
+            </defaultIngredientFilter>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef Name="BaseMeleeWeapon_Sharp_Quality_GA" Abstract="True" ParentName="BaseMeleeWeapon_Sharp_GA">
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponMelee</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="Feldspaten_GA" ParentName="BaseMeleeWeapon_Sharp_Quality_GA">
+        <defName>MeleeWeapon_Feldspaten</defName>
+        <label>M1887 Feldspaten</label>
+        <description>The M1887 entrenching tool was carried by most infantry and used for field works. In the close confines of a trench, rifles and fixed bayonets were often too long for effective use, often forcing entrenching tools into close-quarter fighting. From 1915, soldiers on both sides routinely sharpened the edges of entrenching shovels for use as weapons.</description>
+        <graphicData>
+            <texPath>Weapon/Melee/M1887_Feldspaten</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.00</drawSize>
+        </graphicData>
+        <weaponTags>
+            <li>MedievalMeleeAdvanced</li>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <statBases>
+            <WorkToMake>6000</WorkToMake>
+            <Mass>1.0</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <costList>
+            <Steel>25</Steel>
+            <WoodLog>5</WoodLog>
+        </costList>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>13</power>
+                <cooldownTime>2.3</cooldownTime>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisite>GAStage0</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>3</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <comps>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+        <equippedStatOffsets>
+            <MiningSpeed>1.50</MiningSpeed>
+            <MiningYield>0.50</MiningYield>
+        </equippedStatOffsets>
+    </ThingDef>
+
+    <ThingDef Name="Sabel_GA" ParentName="BaseMeleeWeapon_Sharp_Quality_GA">
+        <defName>MeleeWeapon_Sabel</defName>
+        <label>M1873 Säbel</label>
+        <description>Introduced in 1873 sabre, used by artillery regiments.</description>
+        <graphicData>
+            <texPath>Weapon/Melee/M1873_Sabel</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.00</drawSize>
+        </graphicData>
+        <weaponTags>
+            <li>MedievalMeleeAdvanced</li>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <statBases>
+            <WorkToMake>18000</WorkToMake>
+            <Mass>1.1</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <costList>
+            <Steel>55</Steel>
+            <WoodLog>5</WoodLog>
+        </costList>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+        </tools>
+        <recipeMaker>
+            <researchPrerequisite>GAStage0</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <comps>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+        <equippedStatOffsets>
+            <MentalBreakThreshold>-0.10</MentalBreakThreshold>
+        </equippedStatOffsets>
+    </ThingDef>
+
+</Defs>

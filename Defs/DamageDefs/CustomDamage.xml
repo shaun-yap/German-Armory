@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Defs>
+    <!-- Toxic Smoke -->
+    <DamageDef Name="SmokeGA" Abstract="True">
+        <defName>SmokeGA</defName>
+        <label>smoke</label>
+        <canInterruptJobs>false</canInterruptJobs>
+        <makesBlood>false</makesBlood>
+        <defaultDamage>0</defaultDamage>
+        <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+        <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+        <harmsHealth>false</harmsHealth>
+        <soundExplosion>Explosion_Smoke</soundExplosion>
+        <combatLogRules>Damage_Smoke</combatLogRules>
+    </DamageDef>
+
+    <DamageDef ParentName="SmokeGA">
+        <defName>ToxicSmoke</defName>
+        <label>toxic smoke</label>
+        <!-- Change this graphic -->
+        <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+        <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+        <harmsHealth>true</harmsHealth>
+        <soundExplosion>Explosion_Smoke</soundExplosion>
+        <combatLogRules>Damage_Smoke</combatLogRules>
+        <!-- -->
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <isExplosive>true</isExplosive>
+        <deathMessage>{0} has died in a cloud of toxic smoke.</deathMessage>
+        <hediff>Burn</hediff>
+        <defaultDamage>1.0</defaultDamage>
+        <defaultStoppingPower>0.5</defaultStoppingPower>
+        <defaultArmorPenetration>1.00</defaultArmorPenetration>
+        <buildingDamageFactor>0</buildingDamageFactor>
+        <plantDamageFactor>0</plantDamageFactor>
+        <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>40</severityPerDamageDealt>
+                <victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <!-- AP -->
+    <!-- <DamageDef>
+        <defName>Bullet</defName>
+        <label>bullet</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been shot to death.</deathMessage>
+        <hediff>Gunshot</hediff>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Bullet</impactSoundType>
+        <armorCategory>Sharp</armorCategory>
+        <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+        <isRanged>true</isRanged>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+    <DamageDef ParentName="SmokeGA">
+        <defName>ToxicSmoke</defName>
+        <label>toxic smoke</label>
+        <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+        <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+        <harmsHealth>true</harmsHealth>
+        <soundExplosion>Explosion_Smoke</soundExplosion>
+        <combatLogRules>Damage_Smoke</combatLogRules>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <isExplosive>true</isExplosive>
+        <deathMessage>{0} has died in a cloud of toxic smoke.</deathMessage>
+        <hediff>Scratch</hediff>
+        <defaultDamage>1.0</defaultDamage>
+        <defaultStoppingPower>0.5</defaultStoppingPower>
+        <defaultArmorPenetration>1.00</defaultArmorPenetration>
+        <buildingDamageFactor>0</buildingDamageFactor>
+        <plantDamageFactor>0</plantDamageFactor>
+        <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>40</severityPerDamageDealt>
+                <victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef> -->
+</Defs>

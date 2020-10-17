@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="M1915_GA" ParentName="BaseMakeableGrenade_GA">
+        <defName>Weapon_M1915_GA</defName>
+        <label>M1915 Stielhandgranate</label>
+        <description>The Stielhandgranate was a German hand grenade of unique design. It was the standard issue of the German Empire during World War I, and became the widespread issue of Nazi Germany's Wehrmacht during World War II. The very distinctive appearance led to it being called a "stick grenade", or "potato masher" in British Army slang.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Weapon/Granade/M1915</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.90</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>GAStage0</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>3</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <Mass>0.7</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>10000</WorkToMake>
+        </statBases>
+        <thingCategories>
+            <li>GrenadesCat_GA</li>
+        </thingCategories>
+        <costList>
+            <Steel>20</Steel>
+            <Chemfuel>60</Chemfuel>
+            <WoodLog>10</WoodLog>
+        </costList>
+        <weaponTags>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <label>throw frag grenade</label>
+                <verbClass>Verb_LaunchProjectile</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>16.0</range>
+                <forcedMissRadius>1.5</forcedMissRadius>
+                <warmupTime>1.7</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>Proj_M1915_GA</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="M24_GA" ParentName="BaseMakeableGrenade_GA">
+        <defName>Weapon_M24_GA</defName>
+        <label>M24 Stielhandgranate</label>
+        <description>The Stielhandgranate was a German hand grenade of unique design. It was the standard issue of the German Empire during World War I, and became the widespread issue of Nazi Germany's Wehrmacht during World War II. The very distinctive appearance led to it being called a "stick grenade", or "potato masher" in British Army slang.</description>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Weapon/Granade/M24</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.90</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <recipeMaker>
+            <researchPrerequisite>GAStage0</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>3</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <Mass>0.6</Mass>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <WorkToMake>10000</WorkToMake>
+        </statBases>
+        <thingCategories>
+            <li>GrenadesCat_GA</li>
+        </thingCategories>
+        <costList>
+            <Steel>15</Steel>
+            <Chemfuel>60</Chemfuel>
+            <WoodLog>10</WoodLog>
+        </costList>
+        <weaponTags>
+            <li>GrenadeDestructive</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <label>throw frag grenade</label>
+                <verbClass>Verb_LaunchProjectile</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>16.0</range>
+                <forcedMissRadius>1.5</forcedMissRadius>
+                <warmupTime>1.7</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>Proj_M24_GA</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.66</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+            </li>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

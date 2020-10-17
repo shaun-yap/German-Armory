@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<Defs>
+    <!-- Base German Armory Bullet -->
+    <ThingDef Name="BaseBulletGA" Abstract="True" ParentName="BaseBullet">
+        <defName>BaseBulletGA</defName>
+        <label>Base GA Bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Bullet</thingClass>
+    </ThingDef>
+
+    <!-- Base German Armory Rifle Bullet -->
+    <ThingDef Name="BaseRifleBulletGA" Abstract="True" ParentName="BaseBullet">
+        <defName>BaseRifleBulletGA</defName>
+        <label>Base Rifle GA Bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Bullet</thingClass>
+    </ThingDef>
+
+    <!-- Small Caliber Rounds -->
+    <ThingDef Name="Bullet_9x19mm_GA" ParentName="BaseBulletGA">
+        <defName>Bullet_9x19mm_GA</defName>
+        <label>9x19mm Parabellum</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <speed>60</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="Bullet_763x25mm_GA" ParentName="BaseBulletGA">
+        <defName>Bullet_763x25mm_GA</defName>
+        <label>7.63x25mm Mauser</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>9</damageAmountBase>
+            <speed>65</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="Bullet_765x21mm_GA" ParentName="BaseBulletGA">
+        <defName>Bullet_765x21mm_GA</defName>
+        <label>7.65x21mm Parabellum</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>9</damageAmountBase>
+            <speed>65</speed>
+        </projectile>
+    </ThingDef>
+
+    <!-- Mittelpatrone -->
+    <ThingDef Name="Bullet_792x33mm_GA" ParentName="BaseBulletGA">
+        <defName>Bullet_792x33mm_GA</defName>
+        <label>7.92x33mm Kurz</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+
+    <!-- Rifle Rounds -->
+    <ThingDef Name="Bullet_792x57mm_GA" ParentName="BaseRifleBulletGA">
+        <defName>Bullet_792x57mm_GA</defName>
+        <label>7.92x57mm Mauser</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>16</damageAmountBase>
+            <speed>75</speed>
+            <stoppingPower>1.4</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="Bullet_792x57mm_MG_GA" ParentName="BaseRifleBulletGA">
+        <defName>Bullet_792x57mm_MG_GA</defName>
+        <label>7.92x57mm Mauser</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>16</damageAmountBase>
+            <speed>75</speed>
+            <stoppingPower>1.4</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="Bullet_792x57mm_Sniper_GA" ParentName="BaseRifleBulletGA">
+        <defName>Bullet_792x57mm_Sniper_GA</defName>
+        <label>7.92x57mm Mauser</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>32</damageAmountBase>
+            <speed>100</speed>
+            <stoppingPower>3.0</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="Bullet_792x57mm_BPatronen_GA" ParentName="BaseRifleBulletGA">
+        <defName>Bullet_792x57mm_BPatronen_GA</defName>
+        <label>7.92x57mm Mauser B.-Patronen</label>
+        <projectile>
+            <damageDef>Flame</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <speed>85</speed>
+            <stoppingPower>2.0</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="Bullet_792x94mm_GA" ParentName="BaseRifleBulletGA">
+        <defName>Bullet_792x94mm_GA</defName>
+        <label>7.92x94mm Patronen</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>34</damageAmountBase>
+            <speed>80</speed>
+            <stoppingPower>1.9</stoppingPower>
+        </projectile>
+    </ThingDef>
+   
+    <!-- Rockets -->
+    <ThingDef Name="Bullet_Faustpatrone_GA" ParentName="BaseBullet">
+        <defName>Bullet_Faustpatrone_GA</defName>
+        <label>Rocket</label>
+        <graphicData>
+            <texPath>Weapon/Heavy/Projectile/Bullet_Faustpatrone</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>45</damageAmountBase>
+            <explosionRadius>1.5</explosionRadius>
+            <speed>25</speed>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+        </projectile>
+    </ThingDef>
+    
+    <!-- Flame -->
+    <ThingDef Name="Bullet_Flame_GA" ParentName="BaseBullet">
+        <defName>Bullet_Flame_GA</defName>
+        <label>flame</label>
+        <graphicData>
+            <texPath>Weapon/Heavy/Projectile/Flame</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <speed>15</speed>
+            <damageDef>Flame</damageDef>
+            <explosionRadius>0.5</explosionRadius>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <preExplosionSpawnChance>0.9</preExplosionSpawnChance>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <soundExplode>Flame_Tail</soundExplode>
+        </projectile>
+    </ThingDef>
+    <!-- Grenades -->
+    <ThingDef Name="Proj_M24_GA" ParentName="BaseGrenadeProjectile">
+        <defName>Proj_M24_GA</defName>
+        <label>M24 Stielhandgranate</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Weapon/Granade/Projectile/M24</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.7</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <explosionDelay>100</explosionDelay>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="Proj_M1915_GA" ParentName="BaseGrenadeProjectile">
+        <defName>Proj_M1915_GA</defName>
+        <label>M1915 Stielhandgranate</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Weapon/Granade/Projectile/M1915</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1.7</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <explosionDelay>100</explosionDelay>
+        </projectile>
+    </ThingDef>
+    
+    <ThingDef Name="Bullet_Schiessbecher_GA" ParentName="BaseBullet">
+        <defName>Bullet_Schiessbecher_GA</defName>
+        <label>Schiessbecher Rifle Grenade</label>
+        <graphicData>
+            <texPath>Weapon/Heavy/Projectile/Bullet_Schiessbecher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <explosionRadius>1.9</explosionRadius>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <speed>20</speed>
+        </projectile>
+    </ThingDef>
+
+
+    <!-- Turret Ammo -->
+    
+</Defs>

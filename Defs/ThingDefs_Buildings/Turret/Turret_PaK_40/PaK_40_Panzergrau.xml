@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="PaK_40_Panzergrau_RA" ParentName="Base_PaK_40_RA">
+		<defName>Turret_PaK_40_Panzergrau_RA</defName>
+		<label>7,5cm PaK 40 Panzergrau Paint</label>
+		<description>The 7,5cm Panzerabwehrkanone 40 was a German anti-tank gun developed in 1939-1941 by Rheinmetall and used during the Second World War. With 23 303 examples produced, the Pak 40 formed the backbone of German anti-tank guns for the later part of World War II, mostly in towed form, but also on a number of tank destroyers such as the Marder series.</description>
+		<designationHotKey>Misc4</designationHotKey>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<turretGunDef>Artillery_PaK_40_Panzergrau_RA</turretGunDef>
+			<turretTopOffset>(0, 0)</turretTopOffset>
+			<turretTopDrawSize>7.0</turretTopDrawSize>
+		</building>
+		<uiIconPath>Turret/PaK_40/PaK_40_Panzergrau_Icon</uiIconPath>
+		<uiIconScale>0.9</uiIconScale>
+	</ThingDef>
+	
+	<ThingDef Name="PaK_40_Panzergrau_Weapon_RA" ParentName="Base_PaK_40_Weapon_RA">
+		<defName>Artillery_PaK_40_Panzergrau_RA</defName>
+		<label>7,5cm PaK 40 gun</label>
+		<description>The 7,5cm Panzerabwehrkanone 40 was a German anti-tank gun developed in 1939-1941 by Rheinmetall and used during the Second World War. With 23 303 examples produced, the Pak 40 formed the backbone of German anti-tank guns for the later part of World War II, mostly in towed form, but also on a number of tank destroyers such as the Marder series.</description>
+		<graphicData>
+			<texPath>Turret/PaK_40/PaK_40_Panzergrau_Weapon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<warmupTime>4.0</warmupTime>
+				<forcedMissRadius>0.7</forcedMissRadius>
+				<requireLineOfSight>true</requireLineOfSight>
+				<minRange>4</minRange>
+				<range>300</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_PaK_40</soundCast>
+				<muzzleFlashScale>29</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+</Defs>

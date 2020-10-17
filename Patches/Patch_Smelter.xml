@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName="SmeltWeapon"]/ingredients/li/filter/categories</xpath>
+				<value>
+					<li>GermanArmoryCat</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName="SmeltWeapon"]/fixedIngredientFilter/categories</xpath>
+				<value>
+					<li>GermanArmoryCat</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName="DestroyWeapon"]/ingredients/li/filter/categories</xpath>
+				<value>
+					<li>GermanArmoryCat</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName="DestroyWeapon"]/fixedIngredientFilter/categories</xpath>
+				<value>
+					<li>GermanArmoryCat</li>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+</Patch>

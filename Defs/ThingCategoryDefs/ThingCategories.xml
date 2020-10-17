@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Main branch -->
+	<ThingCategoryDef>
+		<defName>GermanArmoryCat</defName>
+		<label>German Armory</label>
+		<parent>Weapons</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>UI/German_Armory_Icon</iconPath>
+		
+	</ThingCategoryDef>
+
+	<!-- Arty Shell Branches -->
+	<ThingCategoryDef>
+		  <defName>Shells_GA</defName>
+		  <label>German Armory Shells</label>
+		  <parent>Manufactured</parent>
+		  <!-- <resourceReadoutRoot>true</resourceReadoutRoot> -->
+		  <iconPath>UI/Shell_Icon</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>Shell_FK_96_GA</defName>
+		<label>7,7cm FK 96 ammo</label>
+		<parent>Shells_GA</parent>
+		<iconPath>UI/Shell_FK_96_Icon</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		  <defName>Shell_PaK_36_GA</defName>
+		  <label>3,7cm PaK 36 ammo</label>
+		  <parent>Shells_GA</parent>
+		  <iconPath>UI/Shell_Icon_PaK_36</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		  <defName>Shell_PaK_40_GA</defName>
+		  <label>7,5cm PaK 40 ammo</label>
+		  <parent>Shells_GA</parent>
+		  <iconPath>UI/Shell_Icon_PaK_40</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		  <defName>Shell_Nebelwerfer_41_GA</defName>
+		  <label>15cm Nebelwerfer 41 ammo</label>
+		  <parent>Shells_GA</parent>
+		  <iconPath>UI/Shell_Icon_NbW_41</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		  <defName>Shell_leIG_18_GA</defName>
+		  <label>7,5cm le.IG 18 ammo</label>
+		  <parent>Shells_GA</parent>
+		  <iconPath>UI/Shell_Icon_le.IG_18</iconPath>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>Shell_leFH_16_GA</defName>
+		<label>10,5cm leFH 16 ammo</label>
+		<parent>Shells_GA</parent>
+		<iconPath>UI/Shell_leFH_16_Icon</iconPath>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		  <defName>Shell_Flak_38_GA</defName>
+		  <label>2cm Flak 38 ammo</label>
+		  <parent>Shells_GA</parent>
+		  <iconPath>UI/Shell_Icon_Flak_38</iconPath>
+	</ThingCategoryDef>
+	
+	<!-- Weapon Breakdowns -->
+	<ThingCategoryDef>
+		<defName>RangedWeaponCat_GA</defName>
+		<label>Ranged Weapons</label>
+		<parent>GermanArmoryCat</parent>
+		<iconPath>UI/Weapon_Icon</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>MeleeWeapon_GA</defName>
+		<label>German Armory Melee Weapons</label>
+		<parent>GermanArmoryCat</parent>
+		<iconPath>UI/Weapon_Icon</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>GrenadesCat_GA</defName>
+		<label>Grenades</label>
+		<parent>GermanArmoryCat</parent>
+		<iconPath>UI/Weapon_Icon</iconPath>
+	</ThingCategoryDef>
+
+	<!-- Detailed Breakdown -->
+	<ThingCategoryDef>
+		<defName>PistolsCat_GA</defName>
+		<label>Pistols</label>
+		<parent>RangedWeaponCat_GA</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>SMGCat_GA</defName>
+		<label>SMGs</label>
+		<parent>RangedWeaponCat_GA</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RiflesCat_GA</defName>
+		<label>Rifles</label>
+		<parent>RangedWeaponCat_GA</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>ModifiedRiflesCat_GA</defName>
+		<label>Modified Rifles</label>
+		<parent>RangedWeaponCat_GA</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>LMGCat_GA</defName>
+		<label>Light Machine Guns</label>
+		<parent>GermanArmoryCat</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>FlamethrowerCat_GA</defName>
+		<label>Flamethrowers</label>
+		<parent>GermanArmoryCat</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>ATCat_GA</defName>
+		<label>Anti-Tank Weapons</label>
+		<parent>GermanArmoryCat</parent>
+	</ThingCategoryDef>
+
+	<!-- IDK what am I doing with this-->
+	<ThingCategoryDef>
+		<defName>Security_GA</defName>
+		<label>Security</label>
+		<parent>GermanArmoryCat</parent>
+		<iconPath>UI/Security_Icon</iconPath>
+	</ThingCategoryDef>
+
+</Defs>

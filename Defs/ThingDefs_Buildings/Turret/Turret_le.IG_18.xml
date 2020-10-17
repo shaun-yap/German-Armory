@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="Base_leIG_18_RA" ParentName="BuildingBase" Abstract="True">
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Turret/le.IG_18/le.IG_18_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0.38,0.2,0.56375,0.8)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+			</damageData>
+			<shadowData>
+				<offset>(-0.13,-0.87,-0.1)</offset>
+				<volume>(0.5,0.4,1.05)</volume>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<stealable>false</stealable>
+		<size>(2,2)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<thingCategories>
+			<li>Security_GA</li>
+		</thingCategories>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+			<costList>
+				<Steel>200</Steel>
+				<ComponentIndustrial>8</ComponentIndustrial>
+			</costList>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Mannable">
+			<manWorkType>Violent</manWorkType>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>240</MaxHitPoints>
+			<Flammability>0.4</Flammability>
+			<WorkToBuild>4000</WorkToBuild>
+			<Mass>200</Mass>
+			<Beauty>-10</Beauty>
+		</statBases>
+		<building>
+			<turretBurstWarmupTime>2.0</turretBurstWarmupTime>
+				<turretBurstCooldownTime>2.0</turretBurstCooldownTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>GAInfantrySupport</li>
+		</researchPrerequisites>
+		<uiIconScale>0.9</uiIconScale>
+	</ThingDef>
+	
+	<ThingDef Name="Base_leIG_18_Weapon_RA" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<label>artillery error</label>
+		<useHitPoints>false</useHitPoints>
+		<equipmentType>Primary</equipmentType>
+		<tickerType>Never</tickerType>
+		<techLevel>Spacer</techLevel>
+		<destroyOnDrop>True</destroyOnDrop>
+		<menuHidden>True</menuHidden>
+		<tradeability>None</tradeability>
+		<comps>
+			<li>
+			<compClass>CompEquippable</compClass>
+			</li>
+			<li Class="CompProperties_ChangeableProjectile" />
+		</comps>
+		<building>
+			<fixedStorageSettings>
+			<filter>
+				<categories>
+					<li>Shell_leIG_18_GA</li>
+				</categories>
+			</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+			<filter>
+				<categories>
+					<li>Shell_leIG_18_GA</li>
+				</categories>
+				<disallowedThingDefs>
+				</disallowedThingDefs>
+			</filter>
+		  </defaultStorageSettings>
+		</building>
+		<researchPrerequisites>
+			<li>GAInfantrySupport</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<ThingDef ParentName="Base_leIG_18_RA">
+		<defName>Turret_leIG_18_RA</defName>
+		<label>7,5cm le.IG 18</label>
+		<description>The 7,5 cm leichtes Infanteriegeschütz 18 was an infantry support gun of the German Wehrmacht used during World War II.</description>
+		<designationHotKey>Misc4</designationHotKey>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<turretGunDef>Artillery_leIG_18_RA</turretGunDef>
+			<turretTopOffset>(0, 0)</turretTopOffset>
+			<turretTopDrawSize>3.0</turretTopDrawSize>
+		</building>
+		<uiIconPath>Turret/le.IG_18/le.IG_18_Icon</uiIconPath>
+		<uiIconScale>0.9</uiIconScale>
+	</ThingDef>
+	
+	<ThingDef ParentName="Base_leIG_18_Weapon_RA">
+		<defName>Artillery_leIG_18_RA</defName>
+		<label>7,5cm le.IG 18 gun</label>
+		<description>The 7,5 cm leichtes Infanteriegeschütz 18 was an infantry support gun of the German Wehrmacht used during World War II.</description>
+		<graphicData>
+			<texPath>Turret/le.IG_18/le.IG_18_Weapon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<warmupTime>2.0</warmupTime>
+				<forcedMissRadius>4.0</forcedMissRadius>
+				<requireLineOfSight>false</requireLineOfSight>
+				<minRange>5</minRange>
+				<range>300</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_le.IG_18</soundCast>
+				<muzzleFlashScale>29</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef Name="Base_leIG_18_Shell_RA" ParentName="ResourceBase" Abstract="True">
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<stackLimit>50</stackLimit>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>100</MarketValue>
+			<Mass>3.0</Mass>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>0.5</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Shell_leIG_18_GA</li>
+		</thingCategories>
+		<tradeTags>
+			<li>MortarShell</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef Name="Base_leIG_18_MakeableShell_RA" ParentName="Base_leIG_18_Shell_RA" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workAmount>800</workAmount>
+			<targetCountAdjustment>5</targetCountAdjustment>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>TableGA</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+			<researchPrerequisites>
+				<li>GAInfantrySupport</li>
+			</researchPrerequisites>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="Shell_leIG_18_HE_RA" ParentName="Base_leIG_18_MakeableShell_RA">
+		<defName>Shell_leIG_18_HE_RA</defName>
+		<label>7,5cm le.IG 18 HE Shell</label>
+		<description>A shell filled with high explosives. Explodes when damaged.</description>
+		<graphicData>
+			<texPath>Turret/le.IG_18/Projectile/Shell_le.IG_18_HE</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.20</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+			<explosiveRadius>4.0</explosiveRadius>
+			<explosiveDamageType>Bomb</explosiveDamageType>
+			<explosiveExpandPerStackcount>0.6</explosiveExpandPerStackcount>
+			<startWickHitPointsPercent>0.8</startWickHitPointsPercent>
+			<wickTicks>
+				<min>30</min>
+				<max>60</max>
+			</wickTicks>
+			</li>
+		</comps>
+		<projectileWhenLoaded>Bullet_leIG_18_HE_RA</projectileWhenLoaded>
+		<costList>
+			<Steel>7</Steel>
+			<Chemfuel>7</Chemfuel>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef Name="Shell_leIG_18_HEAT_RA" ParentName="Base_leIG_18_MakeableShell_RA">
+		<defName>Shell_leIG_18_HEAT_RA</defName>
+		<label>7,5cm le.IG 18 HEAT Shell</label>
+		<description>High explosive anti tank shell. Explodes when damaged.</description>
+		<graphicData>
+			<texPath>Turret/le.IG_18/Projectile/Shell_HEAT</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.20</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+			<explosiveRadius>4.0</explosiveRadius>
+			<explosiveDamageType>Bomb</explosiveDamageType>
+			<explosiveExpandPerStackcount>0.6</explosiveExpandPerStackcount>
+			<startWickHitPointsPercent>0.8</startWickHitPointsPercent>
+			<wickTicks>
+				<min>30</min>
+				<max>60</max>
+			</wickTicks>
+			</li>
+		</comps>
+		<projectileWhenLoaded>Bullet_leIG_18_HEAT_RA</projectileWhenLoaded>
+		<costList>
+			<Steel>7</Steel>
+			<Chemfuel>7</Chemfuel>
+		</costList>
+	</ThingDef>
+
+	<ThingDef Name="Bullet_leIG_18_HE_RA" ParentName="BaseBullet">
+	    <defName>Bullet_leIG_18_HE_RA</defName>
+	    <label>Gun Shell</label>
+	    <graphicData>
+			<texPath>Turret/le.IG_18/Projectile/Bullet_le.IG_18_HE</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+	    <projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<explosionRadius>3.5</explosionRadius>
+			<speed>30</speed>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Name="Bullet_leIG_18_HEAT_RA" ParentName="BaseBullet">
+	    <defName>Bullet_leIG_18_HEAT_RA</defName>
+	    <label>Gun Shell</label>
+	    <graphicData>
+			<texPath>Turret/le.IG_18/Projectile/Bullet_le.IG_18_HEAT</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+	    <projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>50</damageAmountBase>
+			<explosionRadius>0.9</explosionRadius>
+			<speed>30</speed>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Contains all the base for turrets, turret guns, and turret shells/bullets. -->
+<Defs>
+<!-- Base Shells -->
+
+<!-- Base Artillery Bullets -->
+    <ThingDef Name="BaseArtyBullet" Abstract="True" ParentName="BaseBullet">
+        <defName>BaseArtyBullet</defName>
+        <label>Gun Shell</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>30</damageAmountBase>
+            <explosionRadius>3.5</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <speed>50</speed>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+</Defs>

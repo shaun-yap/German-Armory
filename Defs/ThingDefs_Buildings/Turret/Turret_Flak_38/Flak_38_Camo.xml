@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="Turret_Flak_38_Camo_RA" ParentName="BuildingBase">
+		<defName>Turret_Flak_38_Camo_RA</defName>
+		<label>2cm Flak 38 Camouflage Paint</label>
+		<description>The Flak 30 and improved Flak 38 were 20 mm anti-aircraft guns used by various German forces throughout World War II. It was not only the primary German light anti-aircraft gun, but by far the most numerously produced German artillery piece throughout the war. It was produced in a variety of models, notably the Flakvierling 38 which combined four Flak 38 autocannons onto a single carriage.</description>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+		<texPath>Turret/Flak_38/Flak_38_Camo_Base</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(3.0,3.0)</drawSize>
+		<damageData>
+		<rect>(0.2,0.2,0.6,0.6)</rect>
+		</damageData>
+		<shadowData>
+		<volume>(0.27,0.25,0.27)</volume>
+		<offset>(0,0,0)</offset>
+		</shadowData>
+		</graphicData>
+			<hasInteractionCell>True</hasInteractionCell>
+			<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<uiIconPath>Turret/Flak_38/Flak_38_Camo_Icon</uiIconPath>
+		<uiIconScale>0.90</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+			<rotatable>true</rotatable>
+		<thingCategories>
+			<li>Security_GA</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>320</MaxHitPoints>
+			<Flammability>0.4</Flammability>
+			<WorkToBuild>4500</WorkToBuild>
+			<Mass>250</Mass>
+			<Beauty>-10</Beauty>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Mannable">
+			<manWorkType>Violent</manWorkType>
+			</li>
+			<li Class="CompProperties_Refuelable">
+			<fuelLabel>Shots until reload</fuelLabel>
+			<fuelGizmoLabel>Bullets left in belt</fuelGizmoLabel>
+			<fuelFilter>
+			<thingDefs>
+			<li>Belt_Flak_38_HEFIT_RA</li>
+			</thingDefs>
+			</fuelFilter>
+			<fuelCapacity>20</fuelCapacity>
+			<initialFuelPercent>1</initialFuelPercent>
+			<autoRefuelPercent>0.50</autoRefuelPercent>
+			<showFuelGizmo>true</showFuelGizmo>
+			<minimumFueledThreshold>1</minimumFueledThreshold>
+			<fuelMultiplier>20</fuelMultiplier>
+			<factorByDifficulty>true</factorByDifficulty>
+			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			<outOfFuelMessage>Cannot shoot: Needs new ammo belt</outOfFuelMessage>
+			<fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+			</li>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<costList>
+			<Steel>250</Steel>
+			<ComponentIndustrial>9</ComponentIndustrial>
+		</costList>
+			<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+			<specialDisplayRadius>24.9</specialDisplayRadius>
+			<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<building>
+			<ai_combatDangerous>false</ai_combatDangerous>
+			<turretGunDef>Gun_Flak_38_Camo_RA</turretGunDef>
+			<turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+			<turretTopOffset>(0, 0)</turretTopOffset>
+			<turretTopDrawSize>3.0</turretTopDrawSize>
+		</building>
+			<placeWorkers>
+				<li>PlaceWorker_TurretTop</li>
+			</placeWorkers>
+		<designationHotKey>Misc2</designationHotKey>
+		<researchPrerequisites>
+			<li>GAAntiAir</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef Name="Gun_Flak_38_Camo_RA" ParentName="BaseWeaponTurret">
+		<defName>Gun_Flak_38_Camo_RA</defName>
+		<label>2cm Flak 38</label>
+		<description>The Flak 30 and improved Flak 38 were 20 mm anti-aircraft guns used by various German forces throughout World War II. It was not only the primary German light anti-aircraft gun, but by far the most numerously produced German artillery piece throughout the war. It was produced in a variety of models, notably the Flakvierling 38 which combined four Flak 38 autocannons onto a single carriage.</description>
+		<graphicData>
+		<texPath>Turret/Flak_38/Flak_38_Camo_Weapon</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+			<soundInteract>Interact_Rifle</soundInteract>
+		<menuHidden>true</menuHidden>
+		<destroyOnDrop>true</destroyOnDrop>
+		<tradeability>None</tradeability>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<AccuracyTouch>0.35</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+		<DeteriorationRate>0</DeteriorationRate>
+			<Mass>12</Mass>
+		<Flammability>0</Flammability>
+		</statBases>
+			<weaponTags Inherit="false">
+			<li>TurretGun</li>
+			</weaponTags>
+		<verbs>
+		<li>
+		<verbClass>Verb_Shoot</verbClass>
+		<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Flak_38_HEFIT_RA</defaultProjectile>
+			<warmupTime>2.0</warmupTime>
+			<forcedMissRadius>4.0</forcedMissRadius>
+			<range>40.0</range>
+			<ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+			<burstShotCount>10</burstShotCount>
+			<soundCast>Shot_Flak_38</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>19</muzzleFlashScale>
+			<consumeFuelPerShot>1.0</consumeFuelPerShot>
+		</li>
+		</verbs>
+	</ThingDef>
+
+</Defs>
