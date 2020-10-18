@@ -29,6 +29,9 @@
 		<!-- <thingCategories>
 			<li>Weapon_GA</li>
 		</thingCategories> -->
+		<thingCategories>
+		<li>BuildingsSecurity</li>
+		</thingCategories>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
 			<Flammability>0.5</Flammability>

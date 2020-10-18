@@ -2,7 +2,7 @@
 <Defs>
 
   <TraderKindDef>
-    <defName>Base_German Armory_Standard</defName>
+    <defName>Base_German_Armory_Standard</defName>
     <stockGenerators>
 
       <!-- Resources -->
