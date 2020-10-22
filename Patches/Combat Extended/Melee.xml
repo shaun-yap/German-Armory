@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+    <match Class="PatchOperationSequence">
+        <success>Normal</success>
+        <operations>
+
+            <!-- Feldspaten (ROUGH) -->
+            <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="MeleeWeapon_Feldspaten"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>handle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>1</power>
+                                <cooldownTime>1.26</cooldownTime>
+                                <armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>blade</label>
+                                <capacities>
+                                    <li>Cut</li>
+                                </capacities>
+                                <power>10</power>
+                                <cooldownTime>1.18</cooldownTime>
+                                <armorPenetrationBlunt>0.36</armorPenetrationBlunt>
+                                <armorPenetrationSharp>0.32</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>point</label>
+                                <capacities>
+                                    <li>Stab</li>
+                                </capacities>
+                                <power>11</power>
+                                <cooldownTime>1.26</cooldownTime>
+                                <chanceFactor>1.33</chanceFactor>
+                                <armorPenetrationBlunt>0.35</armorPenetrationBlunt>
+                                <armorPenetrationSharp>0.42</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="MeleeWeapon_Feldspaten"]/statBases</xpath>
+                    <value>
+                        <Bulk>1</Bulk>
+                        <MeleeCounterParryBonus>0.50</MeleeCounterParryBonus>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="MeleeWeapon_Feldspaten"]/equippedStatOffsets</xpath>
+                    <value>
+                        <MeleeCritChance>0.75</MeleeCritChance>
+                        <MeleeParryChance>0.30</MeleeParryChance>
+                        <MeleeDodgeChance>0.05</MeleeDodgeChance>	
+                    </value>
+                </li>
+
+
+
+                <!-- Sabel (ROUGH) -->
+            <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="MeleeWeapon_Sabel"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>handle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>1</power>
+                                <cooldownTime>1.26</cooldownTime>
+                                <armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>blade</label>
+                                <capacities>
+                                    <li>Cut</li>
+                                </capacities>
+                                <power>10</power>
+                                <cooldownTime>1.18</cooldownTime>
+                                <armorPenetrationBlunt>0.36</armorPenetrationBlunt>
+                                <armorPenetrationSharp>0.55</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>point</label>
+                                <capacities>
+                                    <li>Stab</li>
+                                </capacities>
+                                <power>11</power>
+                                <cooldownTime>1.26</cooldownTime>
+                                <chanceFactor>1.33</chanceFactor>
+                                <armorPenetrationBlunt>0.25</armorPenetrationBlunt>
+                                <armorPenetrationSharp>0.42</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="MeleeWeapon_Sabel"]/statBases</xpath>
+                    <value>
+                        <Bulk>1</Bulk>
+                        <MeleeCounterParryBonus>0.65</MeleeCounterParryBonus>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="MeleeWeapon_Sabel"]/equippedStatOffsets</xpath>
+                    <value>
+                        <MeleeCritChance>0.75</MeleeCritChance>
+                        <MeleeParryChance>0.60</MeleeParryChance>
+                        <MeleeDodgeChance>0.03</MeleeDodgeChance>	
+                    </value>
+                </li>
+
+        <!-- End -->
+        </operations>
+    </match>
+    </Operation>
+</Patch>
