@@ -93,7 +93,7 @@
             </li>
         </tools>
         <recipeMaker>
-            <researchPrerequisite>GAStage0</researchPrerequisite>
+            <researchPrerequisite>Smithing</researchPrerequisite>
             <skillRequirements>
                 <Crafting>3</Crafting>
             </skillRequirements>
@@ -150,7 +150,7 @@
             </li>
         </tools>
         <recipeMaker>
-            <researchPrerequisite>GAStage0</researchPrerequisite>
+            <researchPrerequisite>Smithing</researchPrerequisite>
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>

@@ -1,212 +1,210 @@
-<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Combat Extended</li>
-        </mods>
-    <match Class="PatchOperationSequence">
-        <success>Normal</success>
-        <operations>
-
-            <!-- MG 15 (ROUGH) -->
-            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                <defName>Gun_MG_15_GA</defName>
-                <statBases>
-                    <Mass>9.12</Mass>
-                    <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
-                    <SightsEfficiency>1</SightsEfficiency>
-                    <ShotSpread>0.05</ShotSpread>
-                    <SwayFactor>1.53</SwayFactor>
-                    <Bulk>14.7</Bulk>
-                    <WorkToMake>32000</WorkToMake>
-                </statBases>
-                <!-- <costList>
-                    <Steel>120</Steel>
-                    <WoodLog>5</WoodLog>
-                    <ComponentIndustrial>7</ComponentIndustrial>
-                </costList> -->
-                <Properties>
-                    <recoilAmount>1.32</recoilAmount>
-                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                    <hasStandardCommand>true</hasStandardCommand>
-                    <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
-                    <warmupTime>1.0</warmupTime>
-                    <range>62</range>
-                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                    <burstShotCount>10</burstShotCount>
-                    <soundCast>Shot_MG_15</soundCast>
-                    <soundCastTail>GunTail_Heavy</soundCastTail>
-                    <muzzleFlashScale>9</muzzleFlashScale>
-                    <targetParams>
-                        <canTargetLocations>true</canTargetLocations>
-                    </targetParams>
-                    <recoilPattern>Mounted</recoilPattern>
-                </Properties>
-                <AmmoUser>
-                    <magazineSize>75</magazineSize>
-                    <reloadTime>4</reloadTime>
-                    <ammoSet>AmmoSet_762x54mmR</ammoSet>
-                </AmmoUser>
-                <FireModes>
-                    <aimedBurstShotCount>8</aimedBurstShotCount>
-                    <aiUseBurstMode>FALSE</aiUseBurstMode>
-                    <aiAimMode>SuppressFire</aiAimMode>
-                </FireModes>
-                <weaponTags>
-                    <li>CE_MachineGun</li>
-                    <li>CE_AI_Suppressive</li>
-                </weaponTags>
-                <!-- <researchPrerequisite>
-                    GALightMachineGun
-                </researchPrerequisite> -->
-                <AllowWithRunAndGun>
-                    true
-                </AllowWithRunAndGun>
-            </li>
-
-            <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/ThingDef[defName="Gun_MG_15_GA"]</xpath>
-                <value>
-                <li Class="CombatExtended.GunDrawExtension">
-                    <DrawSize>1.35,1.18</DrawSize>
-                    <DrawOffset>0.13,-0.03</DrawOffset>
+<Operation Class="PatchOperationFindMod">
+    <mods>
+		<li>Combat Extended</li>
+    </mods>
+ 		<match Class="PatchOperationSequence">
+			<operations>
+                <!-- MG 15 (ROUGH) -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>Gun_MG_15_GA</defName>
+                    <statBases>
+                        <Mass>9.12</Mass>
+                        <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.05</ShotSpread>
+                        <SwayFactor>1.53</SwayFactor>
+                        <Bulk>14.7</Bulk>
+                        <WorkToMake>32000</WorkToMake>
+                    </statBases>
+                    <!-- <costList>
+                        <Steel>120</Steel>
+                        <WoodLog>5</WoodLog>
+                        <ComponentIndustrial>7</ComponentIndustrial>
+                    </costList> -->
+                    <Properties>
+                        <recoilAmount>1.32</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+                        <warmupTime>1.0</warmupTime>
+                        <range>62</range>
+                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                        <burstShotCount>10</burstShotCount>
+                        <soundCast>Shot_MG_15</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <targetParams>
+                            <canTargetLocations>true</canTargetLocations>
+                        </targetParams>
+                        <recoilPattern>Mounted</recoilPattern>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>75</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_762x54mmR</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>8</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                        <aiAimMode>SuppressFire</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_MachineGun</li>
+                        <li>CE_AI_Suppressive</li>
+                    </weaponTags>
+                    <!-- <researchPrerequisite>
+                        GALightMachineGun
+                    </researchPrerequisite> -->
+                    <AllowWithRunAndGun>
+                        true
+                    </AllowWithRunAndGun>
                 </li>
-                </value>
-            </li>
 
-            <!-- MG 42 (ROUGH) -->
-            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                <defName>Gun_MG_42_GA</defName>
-                <statBases>
-                    <Mass>9.12</Mass>
-                    <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
-                    <SightsEfficiency>1</SightsEfficiency>
-                    <ShotSpread>0.05</ShotSpread>
-                    <SwayFactor>1.53</SwayFactor>
-                    <Bulk>14.7</Bulk>
-                    <WorkToMake>32000</WorkToMake>
-                </statBases>
-                <!-- <costList>
-                    <Steel>120</Steel>
-                    <WoodLog>5</WoodLog>
-                    <ComponentIndustrial>7</ComponentIndustrial>
-                </costList> -->
-                <Properties>
-                    <recoilAmount>1.32</recoilAmount>
-                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                    <hasStandardCommand>true</hasStandardCommand>
-                    <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
-                    <warmupTime>1.0</warmupTime>
-                    <range>62</range>
-                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                    <burstShotCount>10</burstShotCount>
-                    <soundCast>Shot_MG_42</soundCast>
-                    <soundCastTail>GunTail_Heavy</soundCastTail>
-                    <muzzleFlashScale>9</muzzleFlashScale>
-                    <targetParams>
-                        <canTargetLocations>true</canTargetLocations>
-                    </targetParams>
-                    <recoilPattern>Mounted</recoilPattern>
-                </Properties>
-                <AmmoUser>
-                    <magazineSize>250</magazineSize>
-                    <reloadTime>6.5</reloadTime>
-                    <ammoSet>AmmoSet_762x54mmR</ammoSet>
-                </AmmoUser>
-                <FireModes>
-                    <aimedBurstShotCount>8</aimedBurstShotCount>
-                    <aiUseBurstMode>FALSE</aiUseBurstMode>
-                    <aiAimMode>SuppressFire</aiAimMode>
-                </FireModes>
-                <weaponTags>
-                    <li>CE_MachineGun</li>
-                    <li>CE_AI_Suppressive</li>
-                </weaponTags>
-                <!-- <researchPrerequisite>
-                    GALightMachineGun
-                </researchPrerequisite> -->
-                <AllowWithRunAndGun>
-                    true
-                </AllowWithRunAndGun>
-            </li>
-
-            <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/ThingDef[defName="Gun_MG_42_GA"]</xpath>
-                <value>
-                <li Class="CombatExtended.GunDrawExtension">
-                    <DrawSize>1.35,1.18</DrawSize>
-                    <DrawOffset>0.13,-0.03</DrawOffset>
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/ThingDef[defName="Gun_MG_15_GA"]</xpath>
+                    <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DrawSize>1.35,1.18</DrawSize>
+                        <DrawOffset>0.13,-0.03</DrawOffset>
+                    </li>
+                    </value>
                 </li>
-                </value>
-            </li>
 
-            <!-- MG 34 (ROUGH) -->
-            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                <defName>Gun_MG_34_GA</defName>
-                <statBases>
-                    <Mass>9.12</Mass>
-                    <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
-                    <SightsEfficiency>1</SightsEfficiency>
-                    <ShotSpread>0.05</ShotSpread>
-                    <SwayFactor>1.53</SwayFactor>
-                    <Bulk>14.7</Bulk>
-                    <WorkToMake>32000</WorkToMake>
-                </statBases>
-                <!-- <costList>
-                    <Steel>120</Steel>
-                    <WoodLog>5</WoodLog>
-                    <ComponentIndustrial>7</ComponentIndustrial>
-                </costList> -->
-                <Properties>
-                    <recoilAmount>1.32</recoilAmount>
-                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                    <hasStandardCommand>true</hasStandardCommand>
-                    <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
-                    <warmupTime>1.0</warmupTime>
-                    <range>62</range>
-                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-                    <burstShotCount>10</burstShotCount>
-                    <soundCast>Shot_MG_34</soundCast>
-                    <soundCastTail>GunTail_Heavy</soundCastTail>
-                    <muzzleFlashScale>9</muzzleFlashScale>
-                    <targetParams>
-                        <canTargetLocations>true</canTargetLocations>
-                    </targetParams>
-                    <recoilPattern>Mounted</recoilPattern>
-                </Properties>
-                <AmmoUser>
-                    <magazineSize>50</magazineSize>
-                    <reloadTime>5</reloadTime>
-                    <ammoSet>AmmoSet_762x54mmR</ammoSet>
-                </AmmoUser>
-                <FireModes>
-                    <aimedBurstShotCount>8</aimedBurstShotCount>
-                    <aiUseBurstMode>FALSE</aiUseBurstMode>
-                    <aiAimMode>SuppressFire</aiAimMode>
-                </FireModes>
-                <weaponTags>
-                    <li>CE_MachineGun</li>
-                    <li>CE_AI_Suppressive</li>
-                </weaponTags>
-                <!-- <researchPrerequisite>
-                    GALightMachineGun
-                </researchPrerequisite> -->
-                <AllowWithRunAndGun>
-                    true
-                </AllowWithRunAndGun>
-            </li>
-
-            <li Class="PatchOperationAddModExtension">
-                <xpath>Defs/ThingDef[defName="Gun_MG_34_GA"]</xpath>
-                <value>
-                <li Class="CombatExtended.GunDrawExtension">
-                    <DrawSize>1.35,1.18</DrawSize>
-                    <DrawOffset>0.13,-0.03</DrawOffset>
+                <!-- MG 34 (ROUGH) -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>Gun_MG_34_GA</defName>
+                    <statBases>
+                        <Mass>9.12</Mass>
+                        <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.05</ShotSpread>
+                        <SwayFactor>1.53</SwayFactor>
+                        <Bulk>14.7</Bulk>
+                        <WorkToMake>32000</WorkToMake>
+                    </statBases>
+                    <!-- <costList>
+                        <Steel>120</Steel>
+                        <WoodLog>5</WoodLog>
+                        <ComponentIndustrial>7</ComponentIndustrial>
+                    </costList> -->
+                    <Properties>
+                        <recoilAmount>1.32</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+                        <warmupTime>1.0</warmupTime>
+                        <range>62</range>
+                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                        <burstShotCount>10</burstShotCount>
+                        <soundCast>Shot_MG_34</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <targetParams>
+                            <canTargetLocations>true</canTargetLocations>
+                        </targetParams>
+                        <recoilPattern>Mounted</recoilPattern>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>50</magazineSize>
+                        <reloadTime>5</reloadTime>
+                        <ammoSet>AmmoSet_762x54mmR</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>8</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                        <aiAimMode>SuppressFire</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_MachineGun</li>
+                        <li>CE_AI_Suppressive</li>
+                    </weaponTags>
+                    <!-- <researchPrerequisite>
+                        GALightMachineGun
+                    </researchPrerequisite> -->
+                    <AllowWithRunAndGun>
+                        true
+                    </AllowWithRunAndGun>
                 </li>
-                </value>
-            </li>
 
-        </operations>
-    </match>
-    </Operation>
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/ThingDef[defName="Gun_MG_34_GA"]</xpath>
+                    <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DrawSize>1.35,1.18</DrawSize>
+                        <DrawOffset>0.13,-0.03</DrawOffset>
+                    </li>
+                    </value>
+                </li>
+
+
+                <!-- MG 42 (ROUGH) -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>Gun_MG_42_GA</defName>
+                    <statBases>
+                        <Mass>4.12</Mass>
+                        <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.05</ShotSpread>
+                        <SwayFactor>1.53</SwayFactor>
+                        <Bulk>14.7</Bulk>
+                        <WorkToMake>32000</WorkToMake>
+                    </statBases>
+                    <!-- <costList>
+                        <Steel>120</Steel>
+                        <WoodLog>5</WoodLog>
+                        <ComponentIndustrial>7</ComponentIndustrial>
+                    </costList> -->
+                    <Properties>
+                        <recoilAmount>1.32</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+                        <warmupTime>1.0</warmupTime>
+                        <range>62</range>
+                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                        <burstShotCount>10</burstShotCount>
+                        <soundCast>Shot_MG_42</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <targetParams>
+                            <canTargetLocations>true</canTargetLocations>
+                        </targetParams>
+                        <recoilPattern>Mounted</recoilPattern>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>250</magazineSize>
+                        <reloadTime>6.5</reloadTime>
+                        <ammoSet>AmmoSet_762x54mmR</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>8</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                        <aiAimMode>SuppressFire</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_MachineGun</li>
+                        <li>CE_AI_Suppressive</li>
+                    </weaponTags>
+                    <!-- <researchPrerequisite>
+                        GALightMachineGun
+                    </researchPrerequisite> -->
+                    <AllowWithRunAndGun>
+                        true
+                    </AllowWithRunAndGun>
+                </li>
+
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>Defs/ThingDef[defName="Gun_MG_42_GA"]</xpath>
+                    <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DrawSize>1.35,1.18</DrawSize>
+                        <DrawOffset>0.13,-0.03</DrawOffset>
+                    </li>
+                    </value>
+                </li>
+			</operations>
+		</match>
+</Operation>
 </Patch>
