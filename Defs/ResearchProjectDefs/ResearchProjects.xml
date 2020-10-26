@@ -72,7 +72,7 @@ Unlocks the Gewehr 98, an early German bolt-action rifle. Further research will 
         <baseCost>800</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
-            <li>Gunsmithing</li>
+            <li>GAStage0</li>
         </prerequisites>
         <tab>GAResearchTab</tab>
         <researchViewX>1</researchViewX>

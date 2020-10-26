@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?> 
 <Patch>
-        <Operation Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-            <li Class="CombatExtended.PatchOperationFindMod">
-                <modName>Combat Extended</modName>
-            </li>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+    <match Class="PatchOperationSequence">
+        <success>Normal</success>
+        <operations>
 
             <!-- MP 18 (ROUGH) -->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
@@ -89,10 +90,10 @@
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
-                    <warmupTime>0.6</warmupTime>
+                    <!-- <warmupTime>0.6</warmupTime>
                     <range>15</range>
                     <burstShotCount>6</burstShotCount>
-                    <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                    <ticksBetweenBurstShots>6</ticksBetweenBurstShots> -->
                     <!-- <soundCast>Shot_HeavySMG</soundCast>
                     <soundCastTail>GunTail_Heavy</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale> -->
@@ -149,10 +150,10 @@
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
-                    <warmupTime>0.6</warmupTime>
+                    <!-- <warmupTime>0.6</warmupTime>
                     <range>15</range>
                     <burstShotCount>6</burstShotCount>
-                    <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                    <ticksBetweenBurstShots>6</ticksBetweenBurstShots> -->
                     <!-- <soundCast>Shot_HeavySMG</soundCast>
                     <soundCastTail>GunTail_Heavy</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale> -->
@@ -209,10 +210,10 @@
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
-                    <warmupTime>0.6</warmupTime>
+                    <!-- <warmupTime>0.6</warmupTime>
                     <range>15</range>
                     <burstShotCount>6</burstShotCount>
-                    <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                    <ticksBetweenBurstShots>6</ticksBetweenBurstShots> -->
                     <!-- <soundCast>Shot_HeavySMG</soundCast>
                     <soundCastTail>GunTail_Heavy</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale> -->
@@ -249,5 +250,6 @@
 
         <!-- End -->
         </operations>
+    </match>
     </Operation>
 </Patch>

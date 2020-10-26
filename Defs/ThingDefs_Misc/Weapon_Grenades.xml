@@ -12,7 +12,7 @@
         </graphicData>
         <soundInteract>Interact_Grenade</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>Machining</researchPrerequisite>
+            <researchPrerequisite>GAStage0</researchPrerequisite>
             <skillRequirements>
                 <Crafting>3</Crafting>
             </skillRequirements>
@@ -76,7 +76,7 @@
         </graphicData>
         <soundInteract>Interact_Grenade</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>Machining</researchPrerequisite>
+            <researchPrerequisite>GAStage0</researchPrerequisite>
             <skillRequirements>
                 <Crafting>3</Crafting>
             </skillRequirements>

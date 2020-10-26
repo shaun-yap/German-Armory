@@ -55,13 +55,13 @@
 		</statBases>
 		<building>
 			<turretBurstWarmupTime>3.0</turretBurstWarmupTime>
-			<turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+				<turretBurstCooldownTime>3.0</turretBurstCooldownTime>
 		</building>
 		<placeWorkers>
 			<li>PlaceWorker_TurretTop</li>
 		</placeWorkers>
 		<researchPrerequisites>
-			<li>Mortars</li>
+			<li>GAFieldArty</li>
 		</researchPrerequisites>
 		<uiIconScale>0.9</uiIconScale>
 	</ThingDef>

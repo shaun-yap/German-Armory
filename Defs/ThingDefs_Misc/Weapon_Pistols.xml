@@ -79,7 +79,7 @@
         </graphicData>
         <soundInteract>Interact_Autopistol</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <researchPrerequisite>GAPistols</researchPrerequisite>
             <skillRequirements>
                 <Crafting>4</Crafting>
             </skillRequirements>
@@ -344,7 +344,7 @@
         </graphicData>
         <soundInteract>Interact_Autopistol</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>Gunsmithing</researchPrerequisite>
+            <researchPrerequisite>GAPistols</researchPrerequisite>
             <skillRequirements>
                 <Crafting>1</Crafting>
             </skillRequirements>
