@@ -72,7 +72,7 @@
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>GAFlame</researchPrerequisite>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
             <skillRequirements>
                 <Crafting>1</Crafting>
             </skillRequirements>
@@ -134,7 +134,7 @@
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>GAFlame</researchPrerequisite>
+            <researchPrerequisite>Gunsmithing</researchPrerequisite>
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>

@@ -67,7 +67,7 @@
         </building>
         <constructEffect>ConstructMetal</constructEffect>
         <researchPrerequisites>
-            <li>GAStage0</li>
+            <li>Smithing</li>
         </researchPrerequisites>
         <designationHotKey>Misc7</designationHotKey>
         <placeWorkers>
